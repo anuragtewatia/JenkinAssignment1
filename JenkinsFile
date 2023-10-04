@@ -17,9 +17,9 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                  bat "mvn -Dmaven.test.failure.ignore=true clean test"
-
             }
-               stage("First pipeline sample test"{
+            }
+               stage('First pipeline sample test'){
                 steps{
                 echo'Sample 1'
                 }
