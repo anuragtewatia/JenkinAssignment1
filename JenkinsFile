@@ -6,7 +6,7 @@ pipeline {
         maven "Maven"
     }
 
-    stages {
+
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
@@ -19,12 +19,16 @@ pipeline {
                  bat "mvn -Dmaven.test.failure.ignore=true clean test"
             }
             }
-               stage('First pipeline sample test'){
+   stage('Test'){
                 steps{
-                echo'Sample 1'
+                echo'Test Sample 1'
                 }
                 }
-
+   stage('Diploy'){
+                steps{
+                echo'Diploy Sample 1'
+                }
+                }
         
     }
 }
